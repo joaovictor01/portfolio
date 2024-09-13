@@ -15,6 +15,7 @@ export default function ContactMe(props) {
     Animations.animations.fadeInScreen(props.id);
   };
 
+  // eslint-disable-next-line
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
@@ -69,9 +70,7 @@ export default function ContactMe(props) {
         setBool(false);
         resetFields();
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   return (

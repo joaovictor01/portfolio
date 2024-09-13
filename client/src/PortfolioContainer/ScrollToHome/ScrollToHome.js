@@ -22,12 +22,8 @@ export default function ScrollToHome() {
     if (!currentScreen || !currentScreen.screenInView) return;
 
     if (currentScreen.screenInView === "Home") {
-      console.log("HOME SCREEN");
       setVisible(false);
-      // ScrollToHomeElement({ visible: false });
     } else {
-      console.log(currentScreen.screenInView);
-      // ScrollToHomeElement({ visible: true });
       setVisible(true);
     }
 
