@@ -8,10 +8,11 @@ export default function Profile() {
   const [typeEffect] = useTypewriter({
     words: [
       "Desenvolvedor Backend 🚀",
-      "Desenvolvedor Python, Django, Flask, FastAPI",
-      "Desenvolvedor Frontend",
+      "Desenvolvedor Python",
+      "Desenvolvedor Full-Stack",
+      "Desenvolvedor Backend (Django, Flask, FastAPI)",
+      "Desenvolvedor Frontend (React)",
       "Desenvolvedor Mobile (Dart/Flutter e React Native)📱",
-      "React/React Native Dev",
     ],
     loop: {},
     typeSpeed: 75,
@@ -63,8 +64,13 @@ export default function Profile() {
                 </span>
               </h1>
               <span className="profile-role-tagline">
-                I develop applications using Python on the backend and React on
-                the frontend
+                Sou desenvolvedor Full-Stack, com experiência de 4 anos com
+                Python no backend.
+              </span>
+              <br />
+              <span className="profile-role-tagline">
+                Eu desenvolvo aplicações backend com Python e frontend com
+                React.
               </span>
             </span>
           </div>

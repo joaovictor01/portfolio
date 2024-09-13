@@ -10,19 +10,19 @@ export const TOTAL_SCREENS = [
     component: Home,
   },
   {
-    screen_name: "AboutMe",
+    screen_name: "Sobre mim",
     component: AboutMe,
   },
   {
-    screen_name: "Resume",
+    screen_name: "Currículo",
     component: Resume,
   },
   {
-    screen_name: "Testimonial",
+    screen_name: "Depoimentos",
     component: Testimonial,
   },
   {
-    screen_name: "ContactMe",
+    screen_name: "Contato",
     component: ContactMe,
   },
 ];

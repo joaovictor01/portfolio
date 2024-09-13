@@ -51,12 +51,12 @@
 
 .testimonial-section .testi-item p .fa-quote-left {
   margin-right: 5px;
-  color: tomato;
+  color: #008170;
 }
 
 .testimonial-section .testi-item p .fa-quote-right {
   margin-left: 5px;
-  color: tomato;
+  color: #008170;
 }
 
 .testimonial-section .testi-comment .starts {
@@ -70,7 +70,7 @@
 
 .testimonial-section .testi-comment .stars li i {
   font-size: 12px;
-  color: tomato;
+  color: #008170;
 }
 
 .testimonial-section .client-info {
