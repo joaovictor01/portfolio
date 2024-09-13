@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ScrollService from "../../utilities/ScrollService";
 import "./ScrollToHome.css";
-import { TOTAL_SCREENS, GET_SCREEN_INDEX } from "../../utilities/commonUtils";
+import { GET_SCREEN_INDEX } from "../../utilities/commonUtils";
 
 export default function ScrollToHome() {
   let [visible, setVisible] = useState(false);

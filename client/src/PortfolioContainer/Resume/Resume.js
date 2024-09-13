@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
@@ -14,6 +14,7 @@ export default function Resume(props) {
     Animations.animations.fadeInScreen(props.id);
   };
 
+  // eslint-disable-next-line
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
@@ -301,13 +302,6 @@ export default function Resume(props) {
       </div>
     );
   };
-
-  // useEffect(() => {
-  //   return () => {
-  //     /* UNSUBSCRIBE THE SUBSCRIPTIONS */
-  //     fadeInSubscription.unsubscribe();
-  //   };
-  // }, [fadeInSubscription]);
 
   return (
     <div

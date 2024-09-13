@@ -16,6 +16,7 @@ export default function Testimonial(props) {
     Animations.animations.fadeInScreen(props.id);
   };
 
+  // eslint-disable-next-line
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
