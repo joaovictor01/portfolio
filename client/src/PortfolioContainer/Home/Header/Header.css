@@ -35,7 +35,7 @@
   color: var(--white);
 }
 .selected-header-option {
-  color: #005b41;
+  color: var(--dark-foreground);
 }
 
 /*IPAD PRO RESPONSIVENESS*/
@@ -64,7 +64,7 @@
     height: 100vh;
     width: 100%;
     justify-content: space-around;
-    background-color: #232d3f;
+    background-color: var(--medium-dark-background);
     z-index: 1000;
     opacity: 0.5;
   }

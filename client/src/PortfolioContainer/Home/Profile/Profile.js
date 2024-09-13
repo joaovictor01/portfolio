@@ -1,6 +1,6 @@
 import React from "react";
 // import Typical from 'react-typical'
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { useTypewriter } from "react-simple-typewriter";
 import "./Profile.css";
 import ScrollService from "../../../utilities/ScrollService";
 
@@ -16,7 +16,7 @@ export default function Profile() {
     ],
     loop: {},
     typeSpeed: 75,
-    deleteSpeed: 40,
+    deleteSpeed: 25,
   });
 
   return (
@@ -56,7 +56,7 @@ export default function Profile() {
                 <span
                   style={{
                     fontWeight: "bold",
-                    color: "#028391",
+                    color: "var(--light-foreground)",
                     marginLeft: "5px",
                   }}
                 >

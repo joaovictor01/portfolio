@@ -9,12 +9,12 @@
   max-width: 1100px;
   padding: 10px;
   display: flex;
-  box-shadow: 0 0px 20px -2px #232d3f;
+  box-shadow: 0 0px 20px -2px var(--medium-dark-background);
   border-radius: 12px;
   margin: 0 auto;
   flex-direction: column;
   justify-content: center;
-  background-color: #232d3f;
+  background-color: var(--dark-background);
 }
 
 .central-form h2 {
@@ -58,14 +58,14 @@
   margin-top: -52px;
   opacity: 0.9;
   background-color: white;
-  box-shadow: 0 0px 20px -2px #232d3f;
+  box-shadow: 0 0px 20px -2px var(--medium-dark-background);
   border-radius: 12px;
 }
 
 form p {
   text-align: center;
   margin-bottom: 10px;
-  color: #005b41;
+  color: var(--dark-foreground);
   letter-spacing: 0.1rem;
   font-family: "Poppins Bold";
 }
@@ -104,10 +104,10 @@ form button {
   outline: none;
   width: 900px;
   color: rgb(230, 227, 227);
-  border: 2px solid #005b41;
+  border: 2px solid var(--dark-foreground);
   font-size: 12px;
   border-radius: 19px;
-  background-color: #232d3f;
+  background-color: var(--dark-foreground);
   font-size: 18px;
   width: 160px;
   align-items: center;
@@ -119,9 +119,9 @@ form .send-btn {
 }
 
 form button:hover {
-  background-color: #232d3f;
+  background-color: var(--dark-foreground);
   transition: all ease 1s;
-  border: 2px solid #232d3f;
+  border: 2px solid var(--dark-background);
 }
 
 button .load {

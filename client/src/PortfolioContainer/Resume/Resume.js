@@ -53,10 +53,9 @@ export default function Resume(props) {
     { skill: "Python", ratingPercentage: 90 },
     { skill: "Django", ratingPercentage: 85 },
     {
-      skill: "Web Scraping (Selenium, BeautifulSoup, Scrapy)",
+      skill: "Web Scraping (Selenium, Scrapy, BeautifulSoup)",
       ratingPercentage: 80,
     },
-    { skill: "Django", ratingPercentage: 85 },
     { skill: "Linux", ratingPercentage: 90 },
     { skill: "JavaScript", ratingPercentage: 65 },
     { skill: "React JS", ratingPercentage: 60 },

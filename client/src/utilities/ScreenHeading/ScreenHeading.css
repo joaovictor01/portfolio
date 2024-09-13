@@ -15,7 +15,7 @@
 
 .screen-heading {
   font-size: 32px;
-  color: #232d3f;
+  color: var(--medium-dark-background);
   font-family: "Poppins Bold";
 }
 
@@ -44,5 +44,5 @@
 .separator-blob div {
   width: 35px;
   border-radius: 10px;
-  background-color: #005b41;
+  background-color: var(--dark-foreground);
 }

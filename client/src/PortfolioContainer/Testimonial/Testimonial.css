@@ -1,7 +1,7 @@
 .testimonial-section {
   padding: 80px 0 80px;
   /* background-image: url("../../../src/assets/Testimonial/bg-1.jpg"); */
-  background-color: #232d3f;
+  background-color: var(--medium-dark-background);
   background-position: center;
   background-attachment: fixed;
   position: relative;
@@ -17,7 +17,7 @@
   height: 100%;
   z-index: -1;
   opacity: 0.55;
-  background-color: #232d3f;
+  background-color: var(--medium-dark-background);
 }
 
 .footer-image {
