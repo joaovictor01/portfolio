@@ -8,7 +8,8 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client \"",
     "prod": "concurrently NODE_ENV=production \"npm run server\" \"npm run client \"",
-    "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "netlify_build": "concurrently \"npm run build\" \"npm run prod \""
   },
   "author": "",
   "license": "ISC",
