@@ -59,10 +59,10 @@ export default function ContactMe(props) {
         message,
       };
       setBool(true);
-      const res = await axios.post(
-        `${process.env.REACT_APP_BACKEND_BASE_URL}/contact/`,
-        data
-      );
+      let backendBaseUrl =
+        process.env.REACT_APP_BACKEND_BASE_URL ||
+        "https://joaovictorspportfoliobackend.netlify.app";
+      const res = await axios.post(`${backendBaseUrl}/contact/`, data);
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
