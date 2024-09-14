@@ -12,6 +12,7 @@
 }
 @media only screen and (min-width: 475px) {
   .scroll-container {
+    position: fixed;
     margin-bottom: 10px;
   }
 }

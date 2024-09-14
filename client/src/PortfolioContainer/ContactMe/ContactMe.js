@@ -86,7 +86,7 @@ export default function ContactMe(props) {
             <span
               style={{
                 fontWeight: "bold",
-                color: "#028391",
+                color: "var(--light-foreground",
                 marginLeft: "5px",
               }}
             >

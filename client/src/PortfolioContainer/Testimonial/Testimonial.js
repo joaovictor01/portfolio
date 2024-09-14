@@ -37,7 +37,7 @@ export default function Testimonial(props) {
         items: 1,
       },
       1000: {
-        items: 3,
+        items: 2,
       },
     },
   };

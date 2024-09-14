@@ -5,6 +5,7 @@
   justify-content: center;
   height: 10%;
   min-height: fit-content;
+  padding-bottom: 2rem;
 }
 
 .profile-parent {
@@ -154,12 +155,36 @@
 
 @media screen and (max-width: 375px) {
   .profile-picture {
-    height: 275px;
-    width: 275px;
+    height: 200px;
+    width: 200px;
     margin-top: -90px;
   }
 
   .profile-details {
     width: 90%;
   }
+
+  /* Background Effect */
+  .home-container canvas {
+    position: absolute !important;
+    /* top: 0;
+  left: 0; */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+  }
+}
+
+/* Background Effect */
+.home-container canvas {
+  position: absolute !important;
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  /* height: 550px; */
+  margin: 0;
+  padding: 0;
+  z-index: -1;
 }
