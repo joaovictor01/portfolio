@@ -119,7 +119,7 @@ form .send-btn {
 }
 
 form button:hover {
-  background-color: var(--dark-foreground);
+  background-color: var(--light-foreground);
   transition: all ease 1s;
   border: 2px solid var(--dark-background);
 }
