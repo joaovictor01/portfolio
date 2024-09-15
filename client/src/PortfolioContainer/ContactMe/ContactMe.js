@@ -59,14 +59,7 @@ export default function ContactMe(props) {
         message,
       };
       setBool(true);
-      // let backendBaseUrl = process.env.REACT_APP_BACKEND_BASE_URL
-      //   ? process.env.REACT_APP_BACKEND_BASE_URL
-      //   : "https://joaovictorspportfoliobackend.netlify.app";
-      // let backendBaseUrl = "https://joaovictorspportfoliobackend.netlify.app";
-      const client = axios.create({
-        baseUrl: "https://joaovictorspportfoliobackend.netlify.app",
-      });
-      const res = await client.post("/contact/", data);
+      const res = await axios.post("/contact/", data);
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
