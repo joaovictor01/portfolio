@@ -1,8 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 // import Typical from 'react-typical'
 import { useTypewriter } from "react-simple-typewriter";
 import "./Profile.css";
 import ScrollService from "../../../utilities/ScrollService";
+
+function debounce(fn, ms) {
+  let timer;
+  return (_) => {
+    clearTimeout(timer);
+    timer = setTimeout((_) => {
+      timer = null;
+      fn.apply(this, arguments);
+    }, ms);
+  };
+}
 
 export default function Profile() {
   const [typeEffect] = useTypewriter({
@@ -10,40 +21,85 @@ export default function Profile() {
       "Desenvolvedor Backend 🚀",
       "Desenvolvedor Python",
       "Desenvolvedor Full-Stack",
-      "Desenvolvedor Backend (Django, Flask, FastAPI)",
-      "Desenvolvedor Frontend (React)",
-      "Desenvolvedor Mobile (Dart/Flutter e React Native)📱",
+      "Desenvolvedor Backend",
+      "Django, Flask, FastAPI",
+      "Desenvolvedor Frontend",
+      "React, React Native, Flutter",
+      "Desenvolvedor Mobile 📱",
     ],
     loop: {},
     typeSpeed: 75,
     deleteSpeed: 25,
   });
 
+  let canvas = document.createElement("canvas");
+  canvas.setAttribute("id", "profileCanvas");
+  canvas.setAttribute("class", "profile-canvas");
+  let mobileCanvas = document.createElement("canvas");
+  mobileCanvas.setAttribute("id", "mobileProfileCanvas");
+  mobileCanvas.setAttribute("class", "mobile-profile-canvas");
+
+  const setCanvasStyle = (mode = "desktop") => {
+    const homeContainer = document.getElementsByClassName("home-container")[0];
+    if (mode === "desktop") {
+      canvas.style.visibility = "visible";
+      mobileCanvas.style.visibility = "hidden";
+      // mobileCanvas.style.display = "none";
+      canvas.hidden = false;
+      mobileCanvas.hidden = true;
+      canvas.style.height = homeContainer.offsetHeight + "px";
+      canvas.style.maxHeight = homeContainer.offsetHeight + "px";
+      canvas.style.minHeight = homeContainer.offsetHeight + "px";
+    } else {
+      canvas.style.visibility = "hidden";
+      mobileCanvas.style.visibility = "visible";
+      // canvas.style.display = "none";
+      canvas.hidden = true;
+      mobileCanvas.hidden = false;
+      mobileCanvas.style.height = "100% !important";
+      mobileCanvas.style.position = "absolute";
+    }
+  };
+
+  const ajustCanvasSize = () => {
+    if (window.innerWidth < 600) {
+      setCanvasStyle("mobile");
+    } else {
+      setCanvasStyle("desktop");
+    }
+  };
+
   const backgroundEffect = () => {
-    // init
     const homeContainer = document.getElementsByClassName("home-container")[0];
     const profileContainer =
       document.getElementsByClassName("profile-container")[0];
-    const headerContainer =
-      document.getElementsByClassName("header-container")[0];
+
     var maxx =
       document.getElementsByClassName("profile-container")[0].clientWidth;
     var maxy =
       document.getElementsByClassName("profile-container")[0].clientHeight;
     var halfx = maxx / 2;
     var halfy = maxy / 2;
-    var canvas = document.createElement("canvas");
-    canvas.setAttribute("id", "profileCanvas");
 
-    // let canvas = document.getElementsByClassName("profile-container")[0];
-    homeContainer.appendChild(canvas);
+    if (
+      !homeContainer.getElementsByClassName("profile-canvas")[0] ||
+      !homeContainer.getElementsByClassName("mobile-profile-canvas")[0]
+    ) {
+      console.log("ENTROU AQUI - NOT CONTAINS CANVAS");
+      homeContainer.appendChild(canvas);
+      homeContainer.appendChild(mobileCanvas);
+      ajustCanvasSize();
+    } else {
+      canvas = homeContainer.getElementsByClassName("profile-canvas")[0];
+      return;
+    }
+    // let canvas = homeContainer.getElementsByClassName("profile-canvas")[0];
     canvas.style.x = profileContainer.style.x;
     canvas.style.y = profileContainer.style.y;
     canvas.width = maxx;
-    canvas.style.height = homeContainer.offsetHeight + "px";
-    canvas.style.maxHeight = homeContainer.offsetHeight + "px";
-    canvas.style.minHeight = homeContainer.offsetHeight + "px";
+
     var context = canvas.getContext("2d");
+    var mobileContext = mobileCanvas.getContext("2d");
     var dotCount = 200;
     var dots = [];
     // create dots
@@ -54,7 +110,9 @@ export default function Profile() {
     // dots animation
     function render() {
       context.fillStyle = "#000000";
+      mobileContext.fillStyle = "#000000";
       context.fillRect(0, 0, maxx, maxy);
+      mobileContext.fillRect(0, 0, maxx, maxy);
       for (var i = 0; i < dotCount; i++) {
         dots[i].draw();
         dots[i].move();
@@ -82,8 +140,11 @@ export default function Profile() {
       // set color
       context.fillStyle =
         "rgb(" + this.color + "," + this.color + "," + this.color + ")";
+      mobileContext.fillStyle =
+        "rgb(" + this.color + "," + this.color + "," + this.color + ")";
       // draw dot
       context.fillRect(dx, dy, this.size, this.size);
+      mobileContext.fillRect(dx, dy, this.size, this.size);
     };
 
     // calc new position in polar coord
@@ -101,8 +162,13 @@ export default function Profile() {
     render();
   };
 
+  // backgroundEffect();
   useEffect(() => {
     backgroundEffect();
+    window.addEventListener("resize", ajustCanvasSize);
+    return (_) => {
+      window.removeEventListener("resize", ajustCanvasSize);
+    };
   }, []);
 
   return (
@@ -140,6 +206,7 @@ export default function Profile() {
               {" "}
               <h1>
                 <span
+                  class="type-effect"
                   style={{
                     fontWeight: "bold",
                     color: "var(--light-foreground)",

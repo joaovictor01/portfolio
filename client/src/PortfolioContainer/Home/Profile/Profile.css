@@ -153,7 +153,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .profile-picture {
     height: 200px;
     width: 200px;
@@ -175,6 +175,20 @@
     padding: 0;
     z-index: -1;
   }
+
+  .mobile-profile-canvas {
+    position: absolute;
+    /* height: 100% !important; */
+    flex-grow: 1;
+  }
+
+  .type-effect {
+    font-size: 32px;
+  }
+}
+
+#profileCanvas {
+  height: 75% !important;
 }
 
 /* Background Effect */
