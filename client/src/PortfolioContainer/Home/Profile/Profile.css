@@ -147,16 +147,25 @@
     margin: 0 !important;
   }
 
+  .profile-options .highlighted-btn:hover {
+    margin: 0px 0 0 28px;
+    background-color: var(--light-foreground);
+    color: #111;
+  }
+
   .profile-options,
   profile-details-role {
     text-align: center;
   }
 }
 
+#profileCanvas {
+  height: 75% !important;
+}
 @media screen and (max-width: 500px) {
   .profile-picture {
-    height: 200px;
-    width: 200px;
+    height: 190px;
+    width: 190px;
     margin-top: -90px;
   }
 
@@ -177,18 +186,51 @@
   }
 
   .mobile-profile-canvas {
-    position: absolute;
-    /* height: 100% !important; */
-    flex-grow: 1;
+    height: 87% !important;
+    padding-bottom: 45px;
   }
 
   .type-effect {
     font-size: 32px;
   }
+
+  .profile-role-tagline {
+    font-size: 17px;
+  }
+
+  .about-me-parent {
+    padding-top: 20px;
+  }
+
+  .profile-options .highlighted-btn:hover {
+    margin: 0px 0 0 28px;
+    background-color: var(--light-foreground);
+    color: #111;
+  }
 }
 
-#profileCanvas {
-  height: 75% !important;
+@media screen and (max-width: 400px) {
+  .mobile-profile-canvas {
+    height: 100% !important;
+    padding-bottom: 65px !important;
+    /* margin-bottom: 10px !important; */
+  }
+
+  .profile-role-tagline {
+    font-size: 15px;
+  }
+
+  .about-me-parent {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .mobile-profile-canvas {
+    height: 100% !important;
+    padding-bottom: 35px !important;
+    /* margin-bottom: 10px !important; */
+  }
 }
 
 /* Background Effect */
