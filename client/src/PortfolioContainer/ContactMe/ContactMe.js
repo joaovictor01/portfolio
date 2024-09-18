@@ -59,7 +59,7 @@ export default function ContactMe(props) {
         message,
       };
       setBool(true);
-      axios.defaults.baseURL = "https://44.221.51.123:5000";
+      // axios.defaults.baseURL = "https://44.221.51.123:5000";
       const res = await axios.post("/contact/", data);
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
