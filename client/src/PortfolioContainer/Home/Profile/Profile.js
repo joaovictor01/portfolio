@@ -42,28 +42,22 @@ export default function Profile() {
   const setCanvasStyle = (mode = "desktop") => {
     const homeContainer = document.getElementsByClassName("home-container")[0];
     if (mode === "desktop") {
-      console.log("desktop");
       canvas.style.visibility = "visible";
       mobileCanvas.style.visibility = "hidden";
-      // mobileCanvas.style.display = "none";
       canvas.hidden = false;
       mobileCanvas.hidden = true;
       canvas.style.height = homeContainer.offsetHeight + "px";
       canvas.style.maxHeight = homeContainer.offsetHeight + "px";
       canvas.style.minHeight = homeContainer.offsetHeight + "px";
     } else {
-      console.log("mobile");
       canvas.style.visibility = "hidden";
       mobileCanvas.style.visibility = "visible";
-      // canvas.style.display = "none";
       canvas.hidden = true;
       mobileCanvas.hidden = false;
-      // mobileCanvas.style.height = "100% !important";
       mobileCanvas.style.position = "absolute";
       mobileCanvas.style.height = homeContainer.offsetHeight + "px";
       mobileCanvas.style.maxHeight = homeContainer.offsetHeight + "px";
       mobileCanvas.style.minHeight = homeContainer.offsetHeight + "px";
-      // mobileCanvas.style.position = "absolute";
     }
   };
 
