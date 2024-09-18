@@ -85,7 +85,6 @@ export default function Profile() {
       !homeContainer.getElementsByClassName("profile-canvas")[0] ||
       !homeContainer.getElementsByClassName("mobile-profile-canvas")[0]
     ) {
-      console.log("ENTROU AQUI - NOT CONTAINS CANVAS");
       homeContainer.appendChild(canvas);
       homeContainer.appendChild(mobileCanvas);
       ajustCanvasSize();
