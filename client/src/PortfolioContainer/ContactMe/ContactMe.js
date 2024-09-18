@@ -8,7 +8,6 @@ import imgBack from "../../assets/Images/mailz.jpeg";
 import load1 from "../../assets/Images/load2.gif";
 import axios from "axios";
 import { toast } from "react-toastify";
-require("dotenv").config;
 
 export default function ContactMe(props) {
   let fadeInScreenHandler = (screen) => {

@@ -1,8 +1,9 @@
 const router = require("express").Router();
+router.set("trust proxy", 1 /* number of proxies between user and server */);
+
 const rateLimit = require("express-rate-limit");
 const nodemailer = require("nodemailer");
 const { body, validationResult } = require("express-validator");
-const AUTH = require("../auth");
 require("dotenv").config;
 
 const GMAIL_EMAIL = process.env.GMAIL_EMAIL;
@@ -12,9 +13,11 @@ const apiLimiter = rateLimit({
   max: 100, // limit each IP to 100 requests per windowMs
 });
 
+router.get("/ip", (request, response) => response.send(request.ip));
+
 router.use(apiLimiter);
 
-router.post("/contact", AUTH.authenticateKey, (req, res) => {
+router.post("/contact", (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
