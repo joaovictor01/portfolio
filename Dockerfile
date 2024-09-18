@@ -1,12 +1,10 @@
 FROM node:22
 
 RUN mkdir -p /server
-ADD ./server /server
+
 WORKDIR /server
-
+ADD server /server
 COPY package*.json ./
-
-
 
 RUN npm ci --omit=dev && npm cache clean --force
 
