@@ -47,7 +47,7 @@ export default function Resume(props) {
     { label: "Histórico de trabalho", logoSrc: "work-history.svg" },
     { label: "Habilidades de Programação", logoSrc: "programming-skills.svg" },
     { label: "Projetos", logoSrc: "projects.svg" },
-    { label: "Interesses", logoSrc: "interests.svg" },
+    // { label: "Interesses", logoSrc: "interests.svg" },
   ];
 
   const programmingSkillsDetails = [
@@ -63,7 +63,7 @@ export default function Resume(props) {
     { skill: "React Native", ratingPercentage: 60 },
     { skill: "Mongo DB", ratingPercentage: 70 },
     { skill: "PostgreSQL e MySQL", ratingPercentage: 85 },
-    { skill: "Java Core", ratingPercentage: 60 },
+    { skill: "Java", ratingPercentage: 60 },
     { skill: "HTML", ratingPercentage: 70 },
     { skill: "CSS", ratingPercentage: 50 },
     { skill: "Docker", ratingPercentage: 70 },
@@ -253,12 +253,12 @@ export default function Resume(props) {
     <br />,
 
     // Interests
-    <div className="resume-screen-container" key="interests">
-      <ResumeHeading
-        heading="Aprender e Programar"
-        description="Gosto de aprender e melhorar minhas habilidades de programação, fazendo projetos pessoais para treinar e aprender novas tecnologias."
-      />
-    </div>,
+    // <div className="resume-screen-container" key="interests">
+    //   <ResumeHeading
+    //     heading="Aprender e Programar"
+    //     description="Gosto de aprender e melhorar minhas habilidades de programação, fazendo projetos pessoais para treinar e aprender novas tecnologias."
+    //   />
+    // </div>,
   ];
 
   const handleCarousel = (index) => {

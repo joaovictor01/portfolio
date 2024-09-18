@@ -23,7 +23,7 @@ export default function Testimonial(props) {
   const options = {
     loop: true,
     margin: 0,
-    nav: true,
+    nav: false,
     animateIn: "bounceInRight",
     animateOut: "bounceOutRight",
     dots: true,

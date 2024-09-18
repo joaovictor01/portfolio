@@ -1,19 +1,7 @@
-import React, { useState, useEffect } from "react";
-// import Typical from 'react-typical'
+import React, { useEffect } from "react";
 import { useTypewriter } from "react-simple-typewriter";
 import "./Profile.css";
 import ScrollService from "../../../utilities/ScrollService";
-
-function debounce(fn, ms) {
-  let timer;
-  return (_) => {
-    clearTimeout(timer);
-    timer = setTimeout((_) => {
-      timer = null;
-      fn.apply(this, arguments);
-    }, ms);
-  };
-}
 
 export default function Profile() {
   const [typeEffect] = useTypewriter({
@@ -176,11 +164,6 @@ export default function Profile() {
       document.getElementsByClassName("home-container")[0]
     );
     return () => resizeObserver.disconnect(); // clean up
-
-    // window.addEventListener("resize", ajustCanvasSize);
-    // return (_) => {
-    //   window.removeEventListener("resize", ajustCanvasSize);
-    // };
   }, []);
 
   return (
