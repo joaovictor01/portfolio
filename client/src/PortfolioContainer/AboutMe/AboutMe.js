@@ -21,9 +21,9 @@ export default function AboutMe(props) {
       bullets: [
         "Desenvolvedor Backend (Python, Django, Flask, FastAPI)",
         "Desenvolvedor Full Stack e Mobile",
-        "Python",
-        "React/React Native",
-        "Construção de APIs",
+        "Desenvolvedor Python (4 anos de experiência)",
+        "Desenvolvedor React/React Native",
+        "Construção de APIs (FastAPI, Django Rest Framework, Flask)",
         "Construção de Crawlers e Web Scraper com Selenium, BeautifulSoup e Scrapy",
       ],
       heading: "Alguns destaques:",
