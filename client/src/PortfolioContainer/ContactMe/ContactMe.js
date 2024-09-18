@@ -8,6 +8,7 @@ import imgBack from "../../assets/Images/mailz.jpeg";
 import load1 from "../../assets/Images/load2.gif";
 import axios from "axios";
 import { toast } from "react-toastify";
+require("dotenv").config;
 
 export default function ContactMe(props) {
   let fadeInScreenHandler = (screen) => {
@@ -58,9 +59,13 @@ export default function ContactMe(props) {
         email,
         message,
       };
+
+      let header = {
+        "x-api-key": process.env.API_KEY,
+      };
       setBool(true);
       // axios.defaults.baseURL = "https://44.221.51.123:5000";
-      const res = await axios.post("/contact/", data);
+      const res = await axios.post("/contact/", data, { headers: header });
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
