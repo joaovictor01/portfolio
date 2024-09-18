@@ -4,7 +4,8 @@ RUN mkdir -p /server
 WORKDIR /server
 
 COPY package*.json ./
-COPY server ./
+
+ADD server ./
 
 RUN npm ci --omit=dev && npm cache clean --force
 
