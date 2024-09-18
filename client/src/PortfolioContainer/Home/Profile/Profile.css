@@ -162,6 +162,7 @@
 #profileCanvas {
   height: 75% !important;
 }
+
 @media screen and (max-width: 500px) {
   .profile-picture {
     height: 190px;
@@ -186,8 +187,7 @@
   }
 
   .mobile-profile-canvas {
-    height: 87% !important;
-    padding-bottom: 45px;
+    height: 100% !important;
   }
 
   .type-effect {
@@ -212,8 +212,6 @@
 @media screen and (max-width: 400px) {
   .mobile-profile-canvas {
     height: 100% !important;
-    padding-bottom: 65px !important;
-    /* margin-bottom: 10px !important; */
   }
 
   .profile-role-tagline {
@@ -228,8 +226,6 @@
 @media screen and (max-width: 360px) {
   .mobile-profile-canvas {
     height: 100% !important;
-    padding-bottom: 35px !important;
-    /* margin-bottom: 10px !important; */
   }
 }
 

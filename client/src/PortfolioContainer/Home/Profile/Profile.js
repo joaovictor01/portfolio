@@ -42,6 +42,7 @@ export default function Profile() {
   const setCanvasStyle = (mode = "desktop") => {
     const homeContainer = document.getElementsByClassName("home-container")[0];
     if (mode === "desktop") {
+      console.log("desktop");
       canvas.style.visibility = "visible";
       mobileCanvas.style.visibility = "hidden";
       // mobileCanvas.style.display = "none";
@@ -51,13 +52,18 @@ export default function Profile() {
       canvas.style.maxHeight = homeContainer.offsetHeight + "px";
       canvas.style.minHeight = homeContainer.offsetHeight + "px";
     } else {
+      console.log("mobile");
       canvas.style.visibility = "hidden";
       mobileCanvas.style.visibility = "visible";
       // canvas.style.display = "none";
       canvas.hidden = true;
       mobileCanvas.hidden = false;
-      mobileCanvas.style.height = "100% !important";
+      // mobileCanvas.style.height = "100% !important";
       mobileCanvas.style.position = "absolute";
+      mobileCanvas.style.height = homeContainer.offsetHeight + "px";
+      mobileCanvas.style.maxHeight = homeContainer.offsetHeight + "px";
+      mobileCanvas.style.minHeight = homeContainer.offsetHeight + "px";
+      // mobileCanvas.style.position = "absolute";
     }
   };
 
@@ -164,10 +170,23 @@ export default function Profile() {
   // backgroundEffect();
   useEffect(() => {
     backgroundEffect();
-    window.addEventListener("resize", ajustCanvasSize);
-    return (_) => {
-      window.removeEventListener("resize", ajustCanvasSize);
-    };
+
+    const resizeObserver = new ResizeObserver(() => {
+      if (window.innerWidth < 600) {
+        setCanvasStyle("mobile");
+      } else {
+        setCanvasStyle("desktop");
+      }
+    });
+    resizeObserver.observe(
+      document.getElementsByClassName("home-container")[0]
+    );
+    return () => resizeObserver.disconnect(); // clean up
+
+    // window.addEventListener("resize", ajustCanvasSize);
+    // return (_) => {
+    //   window.removeEventListener("resize", ajustCanvasSize);
+    // };
   }, []);
 
   return (
