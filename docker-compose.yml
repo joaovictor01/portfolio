@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: ./server
+    expose:
+      - 5000
+    env_file: .env
+    environment:
+      - PORT=5000
+      - NODE_ENV=production
+      - GMAIL_EMAIL=${GMAIL_EMAIL}
+      - GMAIL_APP_PASSWORD=${GMAIL_APP_PASSWORD}
+      - BACKEND_BASE_URL=${BACKEND_BASE_URL}
