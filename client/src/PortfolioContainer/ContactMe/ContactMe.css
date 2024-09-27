@@ -39,7 +39,23 @@
   font-weight: 400;
   color: white;
   font-size: 18px;
-  opacity: 0.5;
+  opacity: 0.8;
+}
+
+.img-back h3 {
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  opacity: 0.8;
+  font-family: "Hack Regular";
+}
+
+h3 i {
+  color: #43e460;
+  padding: 8px;
+  padding-left: 0px;
+  font-size: 1.2em !important;
 }
 
 .back-form .img-back img {
@@ -156,12 +172,16 @@ button .load img {
     margin-right: 20px;
   }
 
+  /* .img-back img {
+    
+  } */
+
   form {
     flex: 0.9;
   }
 }
 @media screen and (max-width: 414px) {
   .central-form h2 {
-    font-size: 16px;
+    font-size: 24px;
   }
 }

@@ -1,5 +1,7 @@
-const router = require("express").Router();
-router.set("trust proxy", 1 /* number of proxies between user and server */);
+const express = require("express");
+app = express();
+const router = express.Router();
+app.set("trust proxy", 1 /* number of proxies between user and server */);
 
 const rateLimit = require("express-rate-limit");
 const nodemailer = require("nodemailer");

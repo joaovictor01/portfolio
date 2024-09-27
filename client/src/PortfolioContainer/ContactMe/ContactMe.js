@@ -112,11 +112,30 @@ export default function ContactMe(props) {
           >
             <i className="fa fa-github-square"></i>
           </a>
+          <a
+            href="https://api.whatsapp.com/send/?phone=18998121995&text&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fa fa-whatsapp"></i>
+          </a>
         </div>
         <div className="back-form">
           <div className="img-back">
             <h4>Envie seu e-mail aqui!</h4>
+
             <img src={imgBack} alt="email-img" />
+
+            <h3>
+              Ou entre em contato pelo WhatsApp{" "}
+              <a
+                href="https://api.whatsapp.com/send/?phone=18998121995&text&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i className="fa fa-whatsapp"></i>
+              </a>
+            </h3>
           </div>
 
           <form onSubmit={submitForm}>

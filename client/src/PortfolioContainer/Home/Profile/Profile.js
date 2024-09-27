@@ -186,6 +186,13 @@ export default function Profile() {
               >
                 <i className="fa fa-github-square"></i>
               </a>
+              <a
+                href="https://api.whatsapp.com/send/?phone=18998121995&text&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i className="fa fa-whatsapp"></i>
+              </a>
             </div>
           </div>
 
