@@ -104,10 +104,10 @@ export default function Resume(props) {
     // Education
     <div className="resume-screen-container" key="education">
       <ResumeHeading
-        heading={"Ciência da Computação"}
-        subHeading={"Interrompido"}
-        fromDate={"2016"}
-        toDate={" "}
+        heading={"Análise e Desenvolvimento de Sistemas (Cursando)"}
+        subHeading={"Toledo Prudente - Centro Universitário"}
+        fromDate={"2023"}
+        toDate={"2025"}
       />
 
       <ResumeHeading
