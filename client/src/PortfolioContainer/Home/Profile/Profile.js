@@ -173,7 +173,7 @@ export default function Profile() {
           <div className="colz">
             <div className="colz-icon">
               <a
-                href="https://www.linkedin.com/in/jo%C3%A3o-victor-souza-paes-495246112"
+                href="https://www.linkedin.com/in/joaovictorsouzapaes"
                 target="_blank"
                 rel="noreferrer"
               >
