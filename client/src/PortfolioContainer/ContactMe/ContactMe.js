@@ -99,7 +99,7 @@ export default function ContactMe(props) {
             <Typical loop={Infinity} steps={["Entre em contato 📧", 1000]} />
           </h2>{" "} */}
           <a
-            href="https://www.linkedin.com/in/jo%C3%A3o-victor-souza-paes-495246112"
+            href="https://www.linkedin.com/in/joaovictorsouzapaes"
             target="_blank"
             rel="noreferrer"
           >

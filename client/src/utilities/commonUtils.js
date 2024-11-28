@@ -17,10 +17,10 @@ export const TOTAL_SCREENS = [
     screen_name: "Currículo",
     component: Resume,
   },
-  {
-    screen_name: "Depoimentos",
-    component: Testimonial,
-  },
+  // {
+  //   screen_name: "Depoimentos",
+  //   component: Testimonial,
+  // },
   {
     screen_name: "Contato",
     component: ContactMe,
